@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pages = {
         inicio: `
             <h2>Bienvenido a nuestra Tienda</h2>
-            <p>Esta es una PWA de demostración construida con Vanilla JavaScript.</p>
+            <p>Esta es una PWA de demostración .</p>
             <p>Explora nuestra sección de productos para ver el contenido dinámico cargado y almacenado en caché por el Service Worker.</p>
         `,
         productos: `
