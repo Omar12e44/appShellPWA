@@ -1,0 +1,50 @@
+Mi Tienda PWA
+
+Esta es una aplicación web progresiva (PWA) de demostración construida con HTML, CSS y JavaScript puro, sin frameworks ni librerías.
+
+Arquitectura
+
+El proyecto está estructurado como un App Shell, que es la interfaz de usuario mínima que se carga rápidamente y se almacena en caché. El contenido dinámico (como la lista de productos) se carga por separado.
+
+index.html: La estructura principal de la aplicación (App Shell).
+
+style.css: Los estilos para la interfaz de usuario.
+
+script.js: La lógica para la navegación entre vistas, la carga de contenido dinámico y el registro del Service Worker.
+
+service-worker.js: El script que se ejecuta en segundo plano para gestionar el almacenamiento en caché y permitir el funcionamiento sin conexión.
+
+manifest.json: El archivo de manifiesto que describe la aplicación y permite que se instale en el dispositivo del usuario.
+
+Configuración y Ejecución
+
+Para probar esta PWA, necesitas servir los archivos desde un servidor web local. No puedes simplemente abrir el archivo index.html en el navegador, ya que los Service Workers requieren un entorno seguro (HTTPS o localhost).
+
+Servidor Local: La forma más sencilla es usar una extensión como Live Server en Visual Studio Code.
+
+Instala la extensión "Live Server" de Ritwick Dey.
+
+Haz clic derecho en index.html y selecciona "Open with Live Server".
+
+Python: Si tienes Python instalado, navega a la carpeta del proyecto en tu terminal y ejecuta:
+
+python -m http.server
+
+
+Luego, abre http://localhost:8000 en tu navegador.
+
+Cómo Probar el Funcionamiento Sin Conexión
+
+Abre la aplicación en un navegador compatible (Chrome, Firefox, Edge).
+
+Abre las Herramientas de Desarrollador (presionando F12 o Ctrl+Shift+I).
+
+Ve a la pestaña Aplicación (Application en Chrome) o Service Workers (en Firefox).
+
+Verás que el Service Worker está registrado y activado.
+
+Ahora, ve a la pestaña Red (Network).
+
+Marca la casilla que dice Sin conexión (Offline).
+
+Recarga la página. La aplicación debería seguir funcionando perfectamente, cargando el App Shell y el contenido desde la caché del Service Worker. Podrás navegar entre "Inicio" y "Productos" sin conexión a internet.

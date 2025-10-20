@@ -1,0 +1,22 @@
+{
+  "name": "Mi Tienda PWA con Vanilla JS",
+  "short_name": "MiPWA",
+  "description": "Una aplicación web progresiva de demostración creada con JavaScript puro.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#317EFB",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://placehold.co/192x192/317EFB/FFFFFF?text=PWA",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://placehold.co/512x512/317EFB/FFFFFF?text=PWA",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

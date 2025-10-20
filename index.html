@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda PWA con Vanilla JS</title>
+    <meta name="theme-color" content="#317EFB">
+    <link rel="stylesheet" href="style.css">
+    <!-- 1. Enlace al manifiesto de la PWA -->
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<!-- App Shell: La estructura base de la aplicación -->
+<header class="header">
+    <div class="container">
+        <h1 class="header__title">MiPWA</h1>
+        <nav class="nav">
+            <button class="nav__button active" data-page="inicio">Inicio</button>
+            <button class="nav__button" data-page="productos">Productos</button>
+        </nav>
+    </div>
+</header>
+
+<main id="content" class="container content">
+    <!-- El contenido dinámico se cargará aquí -->
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Mi PWA. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

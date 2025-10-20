@@ -1,0 +1,126 @@
+/* Estilos generales y variables */
+:root {
+    --primary-color: #317EFB;
+    --dark-bg: #222;
+    --light-bg: #f4f4f4;
+    --dark-text: #333;
+    --light-text: #fff;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Navegación */
+.nav__button {
+    background: none;
+    border: none;
+    color: var(--light-text);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.nav__button:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.nav__button.active {
+    border-color: var(--light-text);
+    font-weight: bold;
+}
+
+/* Contenido Principal */
+.content {
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 200px); /* Ajustar altura mínima */
+}
+
+.content h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para las tarjetas de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-card h3 {
+    margin-top: 0;
+    color: var(--dark-text);
+}
+
+.product-card p {
+    margin-bottom: 1rem;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
